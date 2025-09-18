@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound.tsx";
 import Dashboard from "./pages/Dashboard.tsx";
 import Chat from "./pages/Chat.tsx";
 import Quiz from "./pages/Quiz.tsx";
+import Map from "@/pages/Map.tsx";
 import "./types/global.d.ts";
 
 const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string);
@@ -57,6 +58,7 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/chat" element={<Chat />} />
             <Route path="/chat/:sessionId" element={<Chat />} />
             <Route path="/quiz" element={<Quiz />} />
+            <Route path="/map" element={<Map />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
